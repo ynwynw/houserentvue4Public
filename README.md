@@ -5,23 +5,25 @@
 ### 接网站建设、小程序、H5、APP、各种系统等
 
 **博客地址：
-[https://blog.csdn.net/2303_76227485/article/details/137520066](https://blog.csdn.net/2303_76227485/article/details/137520066)**
+[https://blog.csdn.net/2303_76227485/article/details/138169148](https://blog.csdn.net/2303_76227485/article/details/138169148)**
 
 **视频演示：
-[https://www.bilibili.com/video/BV1ux4y1Y7nH/](https://www.bilibili.com/video/BV1ux4y1Y7nH/)**
+[https://www.bilibili.com/video/BV1vp421Q7sK/](https://www.bilibili.com/video/BV1vp421Q7sK/)**
 
 **毕业设计所有选题地址：
 [https://github.com/ynwynw/allProject](https://github.com/ynwynw/allProject)**
 
-## 基于Java+Springboot+Vue的服装商城(源代码+数据库+万字论文)135
+## 基于Java+Springboot+Vue的房屋租赁管理系统(源代码+数据库)136
 
 ## 一、系统介绍
-本项目前后端分离，分为管理员、用户两种角色
+本项目前后端分离，分为管理员、用户、工作人员、房东四种角色
 
-### 1、用户：
-- 注册、登录、服装购买、轮播图、公告信息、余额充值、收货地址管理、商品收藏、商品评价、商品订单、个人信息、修改密码
-### 2、管理员：
-- 用户管理、修改密码、服装管理、收藏管理、订单管理、评价管理、服装类型管理、公告类型管理、论会员等级类型管理、公告信息管理、轮播图管理
+### 1、用户/房东：
+- 注册、登录、房屋浏览、预约看房、房屋收藏、轮播图、公告信息、发布租房、房屋评价、房屋信息、个人信息、我的预约、房屋预约
+### 2、工作人员：
+- 修改密码、房屋详情、房屋描述、房屋类型、房屋信息、公告管理、评论管理、房屋收藏管理、房屋预约管理
+### 3、管理员：
+- 工作人员的所有功能、用户管理、菜单管理、角色管理
 
 ## 二、所用技术
 
@@ -31,6 +33,7 @@
 - MybatisPlus
 - Mysql
 - Maven
+- Jwt
 
 前端技术栈：
 
@@ -38,18 +41,15 @@
 - Vue-router 
 - axios 
 - element-ui
-- html
 
 ## 三、环境介绍
 
-基础环境:IDEA/eclipse, JDK1.8, Mysql5.7及以上, Maven3.6, node14, navicat
+基础环境:IDEA/eclipse, JDK1.8, Mysql5.7或以上, Maven3.6, node14, navicat
 
 所有项目以及源代码本人均调试运行无问题 可支持远程调试运行
 
 ## 四、页面截图
-文档截图
-![contents](./picture/picture0.png)
-### 1、用户
+### 1、用户/房东
 ![contents](./picture/picture1.png)
 ![contents](./picture/picture2.png)
 ![contents](./picture/picture3.png)
@@ -68,8 +68,8 @@
 ![contents](./picture/picture16.png)
 ![contents](./picture/picture17.png)
 ![contents](./picture/picture18.png)
-![contents](./picture/picture36.png)
-### 2、管理员：
+
+### 2、工作人员：
 ![contents](./picture/picture19.png)
 ![contents](./picture/picture20.png)
 ![contents](./picture/picture21.png)
@@ -82,6 +82,8 @@
 ![contents](./picture/picture28.png)
 ![contents](./picture/picture29.png)
 ![contents](./picture/picture30.png)
+
+### 3、管理员：
 ![contents](./picture/picture31.png)
 ![contents](./picture/picture32.png)
 ![contents](./picture/picture33.png)
@@ -89,25 +91,26 @@
 ![contents](./picture/picture35.png)
 
 ## 五、浏览地址
-前台登录页面: http://localhost:8080/fuzhuangshangcheng/front/index.html
+前台登录页面: http://localhost:8080/#/userhouse
 
-- 用户账号/密码：a1/123456
+- 用户账号/密码：user/123456
 
-后台登录页面: http://localhost:8081
+后台登录页面: http://localhost:8080
 
-- 管理员账号/密码：admin/admin
+- 工作人员账号/密码：worker/123456
+- 管理员账号/密码：admin/123456
 
 ## 六、部署教程
 
 1. 使用Navicat或者其它工具，在mysql中创建对应名称的数据库，并执行项目的sql
 
-2. 使用IDEA/Eclipse导入fuzhuangshangcheng项目，导入时，若为maven项目请选择maven; 等待依赖下载完成
+2. 使用IDEA/Eclipse导入springboot项目，导入时，若为maven项目请选择maven; 等待依赖下载完成
 
 3. 修改resources目录下面application.yml里面的数据库配置
 
-4. src/main/java/com/fuzhuangshangchengApplication.java启动后端
+4. src/main/java/com/example/DemoApplication.java启动后端
 
-5. vscode或idea打开admin项目
+5. vscode或idea打开vue项目
 
 6. 在编译器中打开terminal，执行npm install 依赖下载完成后执行 npm run serve,执行成功后会显示后台管理访问地址
 

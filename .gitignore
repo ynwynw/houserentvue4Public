@@ -1,6 +1,5 @@
-HELP.md
-/target/
-/src/main/resources/admin/admin/node_modules/
+/springboot/target/
+/vue/node_modules/
 /backend/src/main/resources/files/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
